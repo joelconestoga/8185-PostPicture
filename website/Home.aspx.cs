@@ -49,6 +49,6 @@ public partial class Home : System.Web.UI.Page
 
     protected void Blog_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Default.aspx");
+        Response.Redirect("Blog.aspx");
     }
 }

@@ -46,7 +46,31 @@ public partial class _Default : Page
 
         savePost(FileUpload1.FileName);
 
+        Post_Text.Text = "";
+
         Page_Load(sender, e);
+    }
+
+    protected void Delete_Click(object sender, EventArgs e)
+    {
+        string imageToDelete = ((Button)sender).CommandArgument;
+
+        DeletePost(imageToDelete);
+
+        Page_Load(sender, e);
+    }
+
+    private void DeletePost(string imageToDelete)
+    {
+        foreach (Post post in posts)
+        {
+            if (post.ImageName == imageToDelete)
+            {
+                posts.Remove(post);
+                break;
+            }
+        }
+        FileManager.WriteToBinaryFile(Server.MapPath("~/Posts/Posts.txt"), posts);
     }
 
     private void saveImage(string fileName)

@@ -1,11 +1,23 @@
 ﻿/* CUSTOM STYLES */
 
+  .my-images {
+      max-width: 50%;
+  }
+
+h3 .btn-group { 
+    display: inline-block; 
+}
+
 .body-background {
 	background-color: #3891dd;
 	font-family: 'Raleway', Helvetica, sans-serif;
-    font-size: 16px;
+	font-size: 16px;
 }
 
+.table {
+	width: 800px;
+	text-align: left;
+}
 
 /* index.html */
 .authentication-block {
@@ -54,22 +66,22 @@ thead {
 
 
 i.fa {
-    padding-right: 10px;
+	padding-right: 10px;
 }
 
 
 a:link, a:visited {
-    color: #dd5638;
+	color: #dd5638;
 }
 
 a:hover {
-    text-decoration: none;
-    color: #c9302c;
+	text-decoration: none;
+	color: #c9302c;
 }
 
 .dashboard-container {
 	
-	background: url('../img/tile.jpg') top left repeat;
+	background: url('/Images/tile.jpg') top left repeat;
 	margin-top: 50px;
 
 }

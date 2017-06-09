@@ -13,7 +13,7 @@
 <body class="body-background">
 
 
-	<div class="container z-depth-5 authentication-block wow slideInDown">
+	<div class="container z-depth-5 authentication-block wow bounceIn">
 
 		<div class="row home-page-wrapper">
 			<div class="col-md-12 text-center login-heading">
@@ -38,7 +38,7 @@
                         <input class="form-control" id="Password" runat="server" type="password" placeholder="Password..."/>
 					</div>
 					<div class="form-group">
-						<asp:Button class="btn btn-default btn-login" ID="Button1" runat="server" Text="LOGIN" OnClick="Login_Click"/>
+						<asp:Button CssClass="btn btn-default btn-login" ID="Button1" runat="server" Text="LOGIN" OnClick="Login_Click"/>
 					</div>
 				</form>
 	
