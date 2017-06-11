@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Blog.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Blog.aspx.cs" Inherits="_Default" EnableEventValidation="false"%>
 
 <!DOCTYPE html>
 
@@ -13,66 +13,93 @@
 
 	<div class="container z-depth-5 authentication-block wow bounceIn">
 	
+        <!-- Row for HEADER starts -->
 		<div class="row">
 			<div class="col-md-12 text-center dashboard-heading">
 				<h1>Upload some pictures...</h1>
 			</div>
 		</div>
 	
+        <!-- Row for POSTS starts -->
 		<div class="row">
 
+            <!-- Div MAIN starts -->
 			<div class="col-md-12 text-center">
 
 				<form id="form1" runat="server">
 					
-            		<div class="row">
-    				    <div class="col-md-12 text-center">
-	                        <asp:FileUpload ID="FileUpload1" runat="server" BorderStyle="Ridge" Width="309px" />
-                        </div>
-                    </div>
-            		<div class="row">
-    				    <div class="col-md-4 offset-md-4 text-center">
-						    <asp:TextBox ID="Post_Text" runat="server" placeholder="Comment about your picture..." 
-                                BorderStyle="Ridge" Columns="15"></asp:TextBox>
-						    <asp:Button CssClass="btn btn-sm btn-default waves-effect view-detail-button" ID="Upload_Button" 
-                                runat="server" OnClick="Upload_Click" Text="UPLOAD" />
-                        </div>
-                    </div>
-
 					<hr />
 
-					<div>
-						<asp:Repeater ID="RepeaterImages" runat="server" >
-						<ItemTemplate>
+					<!-- Row for CHOOSE FILE starts -->
+					<div class="row">
+						<div class="col-md-12" "text-center">
+							<asp:FileUpload ID="FileUpload1" runat="server" BorderStyle="Ridge" Width="309px" />
+						</div>
+					</div>
+					
+					<!-- Row for COMMENT/UPLOAD starts -->
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<span class="btn-group">
+								<asp:TextBox ID="Post_Text" runat="server" placeholder="Comment about your picture..." 
+									BorderStyle="Ridge" Columns="25"></asp:TextBox>
+								<asp:Button ID="Upload_Button" 
+									runat="server" OnClick="Upload_Click" Text="Upload" />
+							</span>
+						</div>
+					</div>
+
+					<!-- REPEATER -->
+					<asp:Repeater ID="RepeaterImages" runat="server" >
+					<ItemTemplate>
 			
-        					<hr />
-			
-							<div>
+						<hr />
+		
+						<!-- Row for DELETE starts -->
+						<div class="row">
+							<div class="col-md-3">
+							</div>
+							<div class="col-md-6 text-right">
+								<asp:Button CssClass="btn-danger waves-effect delete-button"
+									runat="server" OnClick="Delete_Click" Text="X" 
+									CommandArgument="<%# (Container.DataItem as Post).ImageName %>" />
+							</div>
+							<div class="col-md-3">
+							</div>
+						</div><!-- /.Row for DELETE ends-->
+
+						<!-- Row for IMAGE starts -->
+						<div class="row">
+							<div class="col-md-3">
+							</div>
+							<div class="col-md-6 text-center">
 								<asp:Image ID="Image" class="my-images" runat="server" ImageUrl='<%# (Container.DataItem as Post).ImageName %>' />
 							</div>
-							<div class="row">
-    				            <div class="col-md-9 text-right">
-                                    <h3 runat="server"> <%# (Container.DataItem as Post).Comment %>
-                                        <span class="btn-group">
-						                    <asp:Button CssClass="btn btn-sm btn-danger waves-effect view-detail-button" ID="Upload_Button" 
-                                                runat="server" OnClick="Delete_Click" Text="DELETE" 
-                                                CommandArgument="<%# (Container.DataItem as Post).ImageName %>" />
-                                        </span>
-                                    </h3>
-    							</div>
+							<div class="col-md-3">
 							</div>
+						</div><!-- /.Row for IMAGE ends-->
+							
+						<!-- Row for COMMENT starts -->
+						<div class="row">
+							<div class="col-md-3">
+							</div>
+							<div class="col-md-6 text-center">
+								<h3 runat="server"><%# (Container.DataItem as Post).Comment %></h3>
+							</div>
+							<div class="col-md-3">
+							</div>
+						</div><!-- /.Row for COMMENT ends-->
 	
-						</ItemTemplate>
-						</asp:Repeater>
-
-
-					</div>
+					</ItemTemplate>
+					</asp:Repeater><!-- REPEATER -->
 
 				</form>
 
-			</div>
-		</div>
-	</div>
+			</div><!-- Div MAIN ends -->
+		
+        </div><!-- /.Row for POSTS ends-->
+	
+    </div><!-- /.Container ends-->
 
 
 	<script type="text/javascript" src="/Scripts/custom/jquery-2.2.3.js"></script>

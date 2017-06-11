@@ -32,7 +32,7 @@
 
 				<form id="form1" runat="server">
 					<div class="form-group">
-						<input class="form-control" id="Username" runat="server" type="text" placeholder="Username..." />
+						<input class="form-control" id="Username" runat="server" type="text" placeholder="Username..." autofocus/>
 					</div>
 					<div class="form-group">
                         <input class="form-control" id="Password" runat="server" type="password" placeholder="Password..."/>

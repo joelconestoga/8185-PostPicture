@@ -1,11 +1,11 @@
 ﻿/* CUSTOM STYLES */
 
   .my-images {
-      max-width: 50%;
+	  width: 540px;
   }
 
 h3 .btn-group { 
-    display: inline-block; 
+	display: inline-block; 
 }
 
 .body-background {
@@ -17,6 +17,12 @@ h3 .btn-group {
 .table {
 	width: 800px;
 	text-align: left;
+}
+
+.table-image {
+    border: 1px solid black;
+    width: 540px;
+    height: 300px;
 }
 
 /* index.html */
@@ -103,6 +109,11 @@ a:hover {
 	font-size: 11px !important;
 }
 
+.delete-button {
+	text-align: center;
+    height: 30px;
+	width: 30px;
+}
 
 @media screen and (max-width : 568px) {
 	.dashboard-container {
