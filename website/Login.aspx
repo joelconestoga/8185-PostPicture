@@ -13,7 +13,7 @@
 <body class="body-background">
 
 
-	<div class="container z-depth-5 authentication-block wow bounceIn">
+	<div class="container z-depth-5 authentication-block dashboard-container wow bounceIn">
 
 		<div class="row home-page-wrapper">
 			<div class="col-md-12 text-center login-heading">

@@ -11,7 +11,8 @@
 </head>
 <body class="body-background">
 
-	<div class="container z-depth-5 authentication-block wow bounceIn">
+    <!-- Container starts -->
+	<div class="container z-depth-5 authentication-block dashboard-container wow bounceIn">
 	
         <!-- Row for HEADER starts -->
 		<div class="row">
@@ -33,7 +34,7 @@
 					<!-- Row for CHOOSE FILE starts -->
 					<div class="row">
 						<div class="col-md-12" "text-center">
-							<asp:FileUpload ID="FileUpload1" runat="server" BorderStyle="Ridge" Width="309px" />
+							<asp:FileUpload ID="FileUpload1" runat="server" BorderStyle="Ridge" Width="309px" BackColor="White"/>
 						</div>
 					</div>
 					
@@ -42,7 +43,7 @@
 						<div class="col-md-12 text-center">
 							<span class="btn-group">
 								<asp:TextBox ID="Post_Text" runat="server" placeholder="Comment about your picture..." 
-									BorderStyle="Ridge" Columns="25"></asp:TextBox>
+									BorderStyle="Ridge" Columns="25" BackColor="White" ></asp:TextBox>
 								<asp:Button ID="Upload_Button" 
 									runat="server" OnClick="Upload_Click" Text="Upload" />
 							</span>

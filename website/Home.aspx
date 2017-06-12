@@ -11,75 +11,69 @@
 </head>
 <body class="body-background">
 
+    <!-- Container starts -->
 	<div class="container z-depth-5 dashboard-container wow slideInDown">
 	
+        <!-- Row for HEADER starts -->
 		<div class="row">
 			<div class="col-md-12 text-center dashboard-heading">
 				<h1>Hello <%: Session["Username"]%></h1>
 			</div>
 		</div>
 	
+        <!-- Row for TABLE starts -->
 		<div class="row">
-
-			<div class="col-md-12 offset-md-1 text-center">
+			<div class="col-md-12 offset-md-1 text-center table-responsive">
 
 				<form id="form1" runat="server">
 
-					<!-- Row for table starts -->
-					<div class="row">
-						<div class="col-md-12">
-							<div class="table-responsive">	
-								<table class="table">
-									<thead>
-										<tr>
-											<th><i class="fa fa-calendar" aria-hidden="true"></i>Option</th>
-											<th><i class="fa fa-info-circle" aria-hidden="true"></i>Details</th>
-										</tr>
-									</thead>
-									<tbody id="tableBody">
-										<tr>
-											<td>Who are you?</td>
-											<td>
-												<asp:RadioButtonList CssClass="radio-inline" RepeatDirection="Horizontal" ID="Gender" runat="server">
-													<asp:ListItem Selected="True">Boy</asp:ListItem>
-													<asp:ListItem>Girl</asp:ListItem>
-												</asp:RadioButtonList>
-											</td>
-										</tr>
-										<tr>
-											<td>Check some hobbies</td>
-											<td>
-												<asp:Button class="btn btn-sm btn-default waves-effect view-detail-button" 
-													ID="Button4" runat="server" Text="HOBBIES" OnClick="Hobbies_Click" />
-											</td>
-										</tr>
-										<tr>
-											<td>Check some places</td>
-											<td>
-												<asp:Button class="btn btn-sm btn-default waves-effect view-detail-button" 
-													ID="Button5" runat="server" Text="PLACES..." OnClick="Places_Click"/>
-											</td>
-										</tr>
-										<tr>
-											<td>Check some pictures</td>
-											<td>
-												<asp:Button class="btn btn-sm btn-default waves-effect view-detail-button" 
-													ID="Button6" runat="server" Text="BLOG" OnClick="Blog_Click"/>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
-					<!-- /.Row for table ends -->
+						<table class="table">
+							<thead>
+								<tr>
+									<th>Option</th>
+									<th>Details</th>
+								</tr>
+							</thead>
+							<tbody id="tableBody">
+								<tr>
+									<td>Who are you?</td>
+									<td>
+										<asp:RadioButtonList CssClass="radio-inline" RepeatDirection="Horizontal" ID="Gender" runat="server">
+											<asp:ListItem Selected="True">Boy</asp:ListItem>
+											<asp:ListItem>Girl</asp:ListItem>
+										</asp:RadioButtonList>
+									</td>
+								</tr>
+								<tr>
+									<td>Check some hobbies</td>
+									<td>
+										<asp:Button class="btn btn-sm btn-default waves-effect view-detail-button" 
+											ID="Button4" runat="server" Text="HOBBIES" OnClick="Hobbies_Click" />
+									</td>
+								</tr>
+								<tr>
+									<td>Check some places</td>
+									<td>
+										<asp:Button class="btn btn-sm btn-default waves-effect view-detail-button" 
+											ID="Button5" runat="server" Text="PLACES..." OnClick="Places_Click"/>
+									</td>
+								</tr>
+								<tr>
+									<td>Check some pictures</td>
+									<td>
+										<asp:Button class="btn btn-sm btn-default waves-effect view-detail-button" 
+											ID="Button6" runat="server" Text="BLOG" OnClick="Blog_Click"/>
+									</td>
+								</tr>
+							</tbody>
+						</table>
 
 				</form>
 
 			</div>
-		</div>
+		</div><!-- /.row for TABLE ends -->
 	
-	</div>
+    </div><!-- /.Container ends-->
 	
 	<script type="text/javascript" src="/Scripts/custom/jquery-2.2.3.js"></script>
 	<script type="text/javascript" src="/Scripts/custom/tether.js"></script>
